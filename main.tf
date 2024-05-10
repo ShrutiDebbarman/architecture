@@ -133,7 +133,7 @@ resource "azurerm_virtual_machine" "example" {
   os_profile {
     computer_name  = "hostname"
     admin_username = "adminuser"
-    admin_password = "Password1234!"  # Change to a secure password
+    admin_password = "Password1234!"  
   }
 
   os_profile_linux_config {
@@ -144,16 +144,16 @@ resource "azurerm_virtual_machine" "example" {
     name              = "example-osdisk"
     caching           = "ReadWrite"
     create_option     = "FromImage"
-    managed_disk_type = "Premium_LRS"  # Choose an appropriate disk type
-    disk_size_gb      = 128  # Adjust size as needed
+    managed_disk_type = "Premium_LRS"  
+    disk_size_gb      = 128  
   }
 
   storage_data_disk {
     name              = "example-datadisk1"
     caching           = "ReadWrite"
     create_option     = "Empty"
-    managed_disk_type = "Premium_LRS"  # Choose an appropriate disk type
-    disk_size_gb      = 512  # Adjust size as needed
+    managed_disk_type = "Premium_LRS"  
+    disk_size_gb      = 512  
     lun               = 0
   }
 
